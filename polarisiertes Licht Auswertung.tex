@@ -10,10 +10,10 @@ Ort: Laserlabor der Fachhochschule Aachen Campus Jülich
 \section{Theorie}
 
 In diesem Versuch sollen unterschiedliche Arten von polarisiertem Licht untersucht und bestimmt werden. \\
-Um das Gesetz von Malus zu bestätigen stellen wir im ersten Teil mit dem ersten Polarisator linear polarisiertes Licht her. Dieses betrachten wir durch einen zweiten Polarisator, dessen Filter wir zwischen $\unit[0]{^\circ}$ und $\unit[90]{^\circ}$ variieren, mit einer Photodiode. \\
-Anschließend stellen wir eine $\lambda/4$ Platte zwischen die beiden Polarisatoren und stellen damit zirkular polarisiertes Licht her. Indem wir nun den zweiten Polarisator zwischen $\unit[-90]{^\circ}$ und $\unit[90]{^\circ}$ variieren stellen wir fest wie gut unser Licht tatsächlich zirkular polarisiert ist. \\
+Um das Gesetz von Malus zu bestätigen, stellen wir im ersten Teil mit dem ersten Polarisator linear polarisiertes Licht her. Dieses betrachten wir mit einer Photodiode durch einen zweiten Polarisator, dessen Filter wir zwischen $\unit[0]{^\circ}$ und $\unit[90]{^\circ}$ variieren. \\
+Anschließend stellen wir eine $\lambda/4$ Platte zwischen die beiden Polarisatoren und stellen damit zirkular polarisiertes Licht her. Indem wir nun den zweiten Polarisator zwischen $\unit[-90]{^\circ}$ und $\unit[90]{^\circ}$ variieren, stellen wir fest wie gut unser Licht tatsächlich zirkular polarisiert ist. \\
 Im dritten Versuchsteil verdrehen wir die $\lambda/4$ Platte, sodass wir elliptisch polarisiertes Licht erhalten. Hier tragen wir auch wieder die Intensität über $\unit[-90]{^\circ}$ bis $\unit[90]{^\circ}$ auf und leiten daraus ab wie stark elliptisch das Licht polarisiert ist. \\
-Im letzten Versuchsteil messen wir mit Hilfe eine Prismas den Brewsterwinkel und bestimmen damit den Brechungsindex des Prismas. Zudem lassen wir einmal p-polarisiertes und einmal s-polarisiertes Licht unter Winkeln zwischen $\unit[10]{^\circ}$ bis $\unit[80]{^\circ}$ auf das Prisma fallen und messen die Intensität des reflektierten Anteils. Es geht dabei um einen Vergleich mit dem Ergebnis der Fresnel'schen Formeln.
+Im letzten Versuchsteil messen wir mit Hilfe eines Prismas den Brewsterwinkel und bestimmen damit den Brechungsindex des Prismas. Zudem lassen wir einmal p-polarisiertes und einmal s-polarisiertes Licht unter den Winkeln zwischen $\unit[10]{^\circ}$ bis $\unit[80]{^\circ}$ auf das Prisma fallen und messen die Intensität des reflektierten Anteils. Es geht dabei um einen Vergleich mit dem Ergebnis der Fresnel'schen Formeln.
 
 
 \section{Geräteliste}
@@ -24,6 +24,8 @@ Im letzten Versuchsteil messen wir mit Hilfe eine Prismas den Brewsterwinkel und
 \item Prisma
 \end{itemize}
 
+
+\newpage
 
 \section{Auswertung}
 
@@ -66,7 +68,7 @@ In der obigen Tabelle sind unsere Rohdaten, die zum Erstellen des Diagramms verw
 	xlabel= $\cos^2(\theta)$ ,
 	ylabel= Signal/V ,
 	grid=both, %major,
-		     xmin=0.1,
+		     xmin=-0.1,
 		     xmax=1.2,
 		     ymin=-0.2,
 		     ymax=2.2,
@@ -76,10 +78,11 @@ In der obigen Tabelle sind unsere Rohdaten, die zum Erstellen des Diagramms verw
 	\addplot[color=blue,no marks,samples=1000,domain=0:7.5] {1.964*x};
 	\addlegendentry{$y = 1,964x$};
 	\end{axis} 
+	\caption{$I = I_0 \cdot \cos^2(\theta) =\unit[ 2,002]{mV} \cdot \cos^2(\theta)$}
 	\end{tikzpicture}
 \end{figure}
 
-Wenn wir uns das Diagramm betrachten, stellen wir fest, das der lineare Zusammenhang zwischen $\cos^2(\theta)$ und dem gemessenen Signal sehr gut getroffen wird. Die leichten Schwankungen der Punkte um die Linie führen wir auf den variierende Laserleistung zurück. 
+Wenn wir uns das Diagramm betrachten, stellen wir fest, das der lineare Zusammenhang sehr gut getroffen wird. Die leichten Schwankungen der Punkte um die Linie führen wir auf den variierende Laserleistung zurück. 
 
 
 
@@ -88,7 +91,7 @@ Wenn wir uns das Diagramm betrachten, stellen wir fest, das der lineare Zusammen
 
 \subsection*{Versuchsteil 2}
 
-Hier ging es darum möglichst gut linear polarisiertes Licht herzustellen. In einem Diagramm haben wir das gemessene Ausgngssignal über den Winkel des zweiten Polarisators aufgetragen. Dabei sollte der Theorie nach alle Punkte auf einer Parallelen zur x-Achse liegen.
+Hier ging es darum möglichst gut zirkular polarisiertes Licht herzustellen. In einem Diagramm haben wir das gemessene Ausgangssignal über den Winkel des zweiten Polarisators aufgetragen. Dabei sollten der Theorie nach alle Punkte auf einer Parallelen zur x-Achse liegen.
 
 
 \begin{figure}[H]
@@ -118,7 +121,10 @@ Hier ging es darum möglichst gut linear polarisiertes Licht herzustellen. In ei
 \end{figure}
 
 
-Wenn wir uns nun die Rohdaten betrachten, stellen wir fest, das wir eine Schwankungsbreite von $\approx \unit[70]{mV}$ haben. 
+\newpage
+
+
+Wenn wir die Rohdaten betrachten, stellen wir fest, das wir eine Schwankungsbreite von $\approx \unit[70]{mV}$ haben. 
 
 \hfill \\
 
@@ -152,7 +158,10 @@ Wenn wir uns nun die Rohdaten betrachten, stellen wir fest, das wir eine Schwank
 \hfill \\
 
 
-Wir erachten dieses Ergebnis als gut, da die Schwankungsbreite nur $\unit[7]{\%}$ des Signals beträgt. Für noch besser zirkular polarisiertes Licht müsste man noch mehr Zeit in die Kallibration der Apparatur stecken, aber das würde leicht die zeitlichen Grenzen des Praktikums und der Studenten sprengen.
+Wir erachten dieses Ergebnis als gut, da die Schwankungsbreite nur $ \approx \unit[7]{\%}$ des Signals beträgt. Für noch besser zirkular polarisiertes Licht müsste man noch mehr Zeit in die Kallibration der Apparatur stecken, aber das würde leicht die zeitlichen Grenzen des Praktikums und der Studenten sprengen.
+
+
+\newpage
 
 
 \subsection*{Versuchsteil 3}
@@ -197,6 +206,11 @@ Aus den Intensitäten, die wir bei $\unit[0]{^\circ}$ und bei $\unit[90]{^\circ}
 \Leftrightarrow \phi = \arctan\left( \sqrt{\frac{I(0)}{I(90)}} \right) &= \arctan\left( \sqrt{\frac{I(1,421)}{I(0,506)}} \right) = \unit[59,16]{^\circ}
 \end{align*}
 
+
+\newpage
+
+
+
 Graphisch sieht das ganze dann so aus:
 
 
@@ -225,7 +239,7 @@ Graphisch sieht das ganze dann so aus:
 \end{figure}
 
 
-Nun können wir noch das Verhältnis des ordentlichen ($E_1$) und des Außerordentlichen ($E_2$) Feldvektors berechnen:
+Nun können wir noch das Verhältnis des ordentlichen ($E_1$) und des außerordentlichen ($E_2$) Feldvektors berechnen:
 
 \begin{align*}
 E_1 &= E(t) \cdot \sin(\theta) = E(t) \cdot 0,85 \\
@@ -233,6 +247,8 @@ E_2 &= E(t) \cdot \cos(\theta) = E(t) \cdot 0,51 \\
 \Rightarrow \frac{E_1}{E_2} &= 1,67
 \end{align*}
 
+
+\newpage
 
 
 \subsection*{Versuchsteil 4}
@@ -269,6 +285,41 @@ Wir haben nun mit einem Prisma einmal den s-polarisierten Teil des Lichts und ei
 \end{figure}
 
 Wir sehen anhand des Graphen für p-polarisiertes Licht, das der Brewsterwinkel in der Nähe von $\unit[60]{^\circ}$ liegen muss. Bei genauerem messen, stellten wir fest, das der Brewsterwinkel bei unserem Prisma $\unit[57,75]{^\circ}$ ist. Das entspricht einem Brechungsindex von 1,58.
+
+
+
+\section{Fehlerbetrachtung}
+
+Im Versuchsteil 2 ist die einstellbare $\lambda/4$ Platte der Hauptfehlergrund. Man kann diese Konstruktionsbedingt nur auf ca $\unit[1-2]{^\circ}$ genau einstellen, daher erhalten wir auch keine hundertprozentige Parallele. \\
+Zudem kennen wir den systematischen Fehler des Transmissionsdetektors und des Anzeigegerätes nicht.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
