@@ -256,35 +256,66 @@ E_2 &= E(t) \cdot \cos(\theta) = E(t) \cdot 0,51 \\
 Wir haben nun mit einem Prisma einmal den s-polarisierten Teil des Lichts und einmal den p-polarisierten Teil des Lichtes betrachtet. 
 
 
-\begin{figure}[H]
-	\begin{tikzpicture}
-	\begin{axis}[yticklabel style={/pgf/number format/fixed},		
-	height=9cm, width=16cm,
-	title={Reflexion am Prisma},
-	legend pos= north west,
+%\begin{figure}[H]
+%	\begin{tikzpicture}
+% 	height=9cm, width=16cm,
+%	title={Reflexion am Prisma},
+%	legend pos= north west,
 	%	     axis x line=middle, % Achse mit Pfeil und Beschriftung am Pfeil
 	%	     axis y line=middle,
-	xmode=normal,						    % x-Achse 
-	ymode=normal,						     % y-Achse 
-	xlabel= $\theta/^\circ$ ,
-	ylabel= Signal/V ,
-	grid=both, %major,
-	xmin=0,
-	xmax=90,
-	ymin=0,
-	ymax=0.7,
-	]
-	\addplot[color=red,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=W,y=I]{Exp_4_p-pol.txt};
-	\addplot[color=blue,only marks,mark=+,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=W,y=I]{Exp_4_s-pol.txt};
-	\addlegendentry{p-polarisiert};
-	\addlegendentry{s-polarisiert};
-	\addplot[color=green,no marks,samples=1000,domain=0:85] {0.026*exp(0.0355*x)};
-	%\addplot[color=green,no marks,samples=1000,domain=0:85] {2*10^(-9)*x^5 - 2.5*10^(-7)*x^4 + 2*10^(-5)*x^3 - 0.0008*x^2 + 0.0115*x - 0.0176};
-	\end{axis} 
-	\end{tikzpicture}
+%	xmode=normal,						    % x-Achse 
+%	ymode=normal,						     % y-Achse 
+%	xlabel= $\theta/^\circ$ ,
+%	ylabel= Signal/V ,
+%	grid=both, %major,
+%	xmin=0,
+%	xmax=90,
+%	ymin=0,
+%	ymax=0.7,
+%	\addplot[color=red,only marks,mark=x,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=W,y=I]{Exp_4_p-pol.txt};
+%	\addplot[color=blue,only marks,mark=+,mark size=4, error bars/.cd,y dir=both, y explicit] table[x=W,y=I]{Exp_4_s-pol.txt};
+%	\addlegendentry{p-polarisiert};
+%	\addlegendentry{s-polarisiert};
+%	\addplot[color=green,no marks,samples=1000,domain=0:85] {0.026*exp(0.0355*x)};
+%	\addplot[color=green,no marks,samples=1000,domain=0:85] {2*10^(-9)*x^5 - 3*10^(-7)*x^4 + 2*10^(-5)*x^3 - 0.0008*x^2 + 0.0115*x - 0.0176};
+%	\end{axis} 
+%	\end{tikzpicture}
+%\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Graphik_Teil_4.jpg}
 \end{figure}
 
+
+
+
 Wir sehen anhand des Graphen für p-polarisiertes Licht, das der Brewsterwinkel in der Nähe von $\unit[60]{^\circ}$ liegen muss. Bei genauerem messen, stellten wir fest, das der Brewsterwinkel bei unserem Prisma $\unit[57,75]{^\circ}$ ist. Das entspricht einem Brechungsindex von 1,58.
+
+Den Winkel $\beta$ haben wir nach der Formel in der Anleitung berechnet und kamen dabei auf folgende Werte für die Reflexionsgrade:
+
+\hfill
+
+\begin{center}
+	\begin{tabular}{c|c|c|c}
+		$\alpha$ & $\beta$ & $R_S$   & $R_P$ \\
+		\hline
+		&       &       &  \\
+		10    & 6,31  & 0,05  & 0,04 \\
+		20    & 12,5  & 0,05  & 0,04 \\
+		30    & 18,45 & 0,07  & 0,03 \\
+		40    & 24,01 & 0,09  & 0,02 \\
+		50    & 29    & 0,13  & 0,005 \\
+		60    & 33,24 & 0,2   & 0,0008 \\
+		70    & 36,48 & 0,32  & 0,04 \\
+		80    & 38,56 & 0,57  & 0,23 \\
+	\end{tabular}
+\end{center}
+
+\hfill
+
+Wie wir auf der Graphik sehen passen unsere Messungen des p-polarisierten Lichts sehr gut zum idealen Verlauf. Allerdings ist die gemessene Reflexionsrate bei s-polarisertem Licht sehr viel größer als man anhand des idealen Verlaufes vermuten würde. Warum das so ist, können wir uns nicht erklären.
 
 
 
